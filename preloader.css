@@ -1,0 +1,243 @@
+body {
+  margin: 0;
+  font-family: Tahoma, sans-serif;
+  font-size: 26px;
+  color: #84C225;
+  background-color: #fff;
+  overflow: hidden;
+}
+
+.loader-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.loader-container:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  background: #fff;
+  z-index: -1;
+  transition: top 1.2s linear 3.1s;
+}
+.loader-container:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  background: #fff;
+  z-index: -1;
+  transition: bottom 1.2s linear 3.1s;
+}
+.loader-container.done:before {
+  top: -50%;
+}
+.loader-container.done:after {
+  bottom: -50%;
+}
+
+.progress {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  transform-origin: center;
+}
+.progress .progress__item {
+  text-align: center;
+  width: 100px;
+  height: 100px;
+  line-height: 100px;
+  border: 2px solid #84C225;
+  border-radius: 50%;
+}
+.progress .progress__item:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  margin-top: -3px;
+  margin-left: 0px;
+  width: 45px;
+  height: 45px;
+  border-top: solid 10px #84C225;
+  border-right: solid 10px #84C225;
+  border-top-right-radius: 100%;
+  transform-origin: left bottom;
+  -webkit-animation: spin 3s linear infinite;
+}
+.progress.float .progress__item:before {
+  border-top-width: 2px;
+  margin-top: 0px;
+  height: 50px;
+}
+.progress.float.shadow:before {
+  border-top-width: 2px;
+  margin-top: -41px;
+  height: 50px;
+}
+.progress.shadow:before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -43px 0 0 12px;
+  width: 45px;
+  height: 45px;
+  border-top: solid 10px #F9F9F9;
+  border-right: solid 10px #F9F9F9;
+  border-top-right-radius: 100%;
+  z-index: -1;
+  transform-origin: left bottom;
+  -webkit-animation: spin 3s linear infinite;
+}
+.progress.shadow:after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100px;
+  height: 100px;
+  color: #F9F9F9;
+  text-align: center;
+  line-height: 100px;
+  border: 2px solid #F9F9F9;
+  border-radius: 50%;
+  margin: -40px 0 0 -40px;
+  z-index: -1;
+  transform-origin: center;
+}
+.progress.done .progress__item {
+  opacity: 0;
+  -webkit-animation: done 3.1s;
+  transition: opacity 0.3s linear 3.1s;
+}
+.progress.done .progress__item:before {
+  display: none;
+}
+.progress.done:before {
+  display: none;
+}
+.progress.done:after {
+  opacity: 0;
+  -webkit-animation: done 3.1s;
+  transition: opacity 0.15s linear 3.1s;
+}
+
+@-webkit-keyframes done {
+  10% {
+    transform: scale(1.1);
+  }
+  20% {
+    transform: scale(0.9);
+  }
+  30% {
+    transform: scale(1.07);
+  }
+  40% {
+    transform: scale(0.93);
+  }
+  50% {
+    transform: scale(1.04);
+  }
+  60% {
+    transform: scale(0.97);
+  }
+  80% {
+    transform: scale(1.01);
+  }
+  90% {
+    transform: scale(0.99);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@-webkit-keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+/* styling the content */
+
+.loader-content h2 {
+  color: #204466;
+  font-size: 26px;
+  font-family: Quicksand, sans-serif;
+  margin-bottom: 10px!important;
+  padding-bottom: 0px!important;
+}
+
+.loader-content h3 {
+  color: #204466;
+  font-size: 26px;
+  font-family: Quicksand, sans-serif;
+  margin-bottom: 10px!important;
+  margin-top: 0px!important;
+}
+
+.loader-content .to-symbol {
+  max-width: 20px;
+  padding-top: 3px;
+}
+
+.loader-content h4 {
+  color: #204466;
+  font-size: 14px;
+  font-family: Quicksand, sans-serif;
+  font-weight: bolder;
+  margin-bottom: 10px!important;
+  margin-top: 0px!important;
+}
+
+.loader-content h5 {
+  color: #7B8088;
+  font-size: 14px;
+  font-family: Quicksand, sans-serif;
+  font-weight: bolder;
+  margin-bottom: 10px!important;
+  margin-top: 0px!important;
+}
+
+.loader-content {
+  text-align: center;
+  font-weight: bolder;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.loader-content-img img {
+  max-width: 8%;
+}
+
+.loader-content-img  {
+  /* max-width: 20%;
+  margin-top: 3%; */
+  text-align: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.load-cont {
+  position: absolute;
+  top: 40%;
+}
+
+.voiaj-logo {
+  position: absolute;
+  bottom: 3%;
+}
