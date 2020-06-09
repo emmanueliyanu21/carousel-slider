@@ -1,0 +1,22 @@
+.carousel-caption img {
+    max-width: 14%;
+    margin-bottom: 20px;
+    margin-top: 15px;
+}
+
+.carousel-caption h5 {
+    font-size: 20px;
+    padding-bottom: 30px;
+}
+
+.carousel-caption h2  {
+    padding-bottom: 20px;
+    font-size: 18px;
+}
+
+.carousel-caption p {
+    font-size: 16px;
+    max-width: 60%;
+    margin: auto;
+    padding-bottom: 25px;
+}
